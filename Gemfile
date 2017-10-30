@@ -68,6 +68,10 @@ gem 'simple_form'
 
 gem 'devise'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+
+gem 'geocoder'
+
+gem 'figaro'
 
 
