@@ -3,14 +3,14 @@ class PhotosController < ApplicationController
 
 
   def create
-    @photo = Place.find(params[:place_id])
-    @place.photo.create(photo_params)
-    redirect_to place_path(place)
+    @place = Place.find(params[:place_id])
+    @place.photos.create(photos_params)
+    redirect_to place_path(@place)
   end
 
 private
 
-def photo_params
+def photos_params
   params.require(:photo).permit(:picture, :caption)
 end
 end
