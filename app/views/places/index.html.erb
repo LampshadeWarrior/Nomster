@@ -9,6 +9,15 @@
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
+
+  <% if place.photos.last.present? %>
+  <div class="booyah-box col-10 offset-1">
+    <%= image_tag(place.photos.last.picture, { height: "100", width: "100"} ) %>
+    <%= place.photos.last.caption %>
+  </div>
+  <% end %>
+
+  
   <% if place.comments.present? %>
     <div class="col-12">
         <blockquote>
